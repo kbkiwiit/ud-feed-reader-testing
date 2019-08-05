@@ -54,6 +54,9 @@ $(function() {
          });
     });
 
+    /**
+     * TO DO FROM HERE
+     */
 
     describe('Initial Entries', function() { 
         /* TODO: Write a test that ensures when the loadFeed
@@ -62,9 +65,14 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-        it('menu hidden', function() {
-            expect($('body').hasClass('menu-hidden')).toBe(true);
-         });
+        beforeEach(async function(done) {
+            await loadFeed();
+          });
+          
+          it('adds entries to feed container', async function() {
+            // const result = await someAsyncFunction();
+            expect($('.feed').length).not.toBe(0);
+          });
     });
 
     
