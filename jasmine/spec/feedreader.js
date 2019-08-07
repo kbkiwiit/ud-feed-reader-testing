@@ -9,7 +9,7 @@ $(function () {
         });
 
 
-        /* Loop through all feeds and ensujre a URL has been
+        /* Loop through all feeds and ensure a URL has been
          * defined and that URL is not empty.
          */
         it('has URL', function () {
@@ -21,7 +21,7 @@ $(function () {
 
         });
 
-        /* Loop through all feeds and ensujre a name has been
+        /* Loop through all feeds and ensure a name has been
          * defined and that name is not empty.
          */
         it('has name', function () {
@@ -63,8 +63,7 @@ $(function () {
         });
 
         it('adds entries to feed container', function () {
-            let entries = document.querySelectorAll('article.entry')
-            expect(entries.length).not.toBe(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
